@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table Editor on JS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script src="//lightswitch05.github.io/table-to-json/javascripts/jquery.tabletojson.min.js"></script>
+	<script src="script/FileSaver.min.js"></script>
+	<script src="script/Blob.js"></script>
+	<script src="script/MainScript.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css"/>
+	<link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-6">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>name</th>
+						<th>value</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+
+		<div class="col-xs-6">
+			<label for="jsonTA">JSON TextArea</label>
+			<textarea id="jsonTA" class="form-control" wrap="soft" rows="5"></textarea><br/>
+			<div class="alert alert-warning alert-dismissible" role="alert">
+				<button type="button" class="close" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			<strong>Ошибка в JSON запросе!</strong>
+			</div>
+			<button type="button" id="serializeTable" class="btn btn-info">Выгрузить данные из таблицы</button>
+			<button type="button" id="updateTable" class="btn btn-info">Загрузить данные в таблицу</button><br/><br/>
+			<button type="button" id="loadJson" class="btn btn-warning">Таблица по-умолчанию</button>
+			<br/><br/>
+
+			<label>Сохранить JSON в файл</label>
+			<div class="input-group">
+			<input type="text" class="form-control" placeholder="Имя файла"/>
+				<span class="input-group-btn">
+					<button class="btn btn-secondary" type="button" id="saveJson">Сохранить</button>
+				</span>
+			</div>
+			<br/>
+			<label>Загрузить JSON из файла</label><br/>
+			<label class="btn btn-primary">
+                Выбрать файл...<input type="file" style="display: none;" id="loadFile">
+            </label>
+            <span id="fileSpan"></span>
+		</div>
+
+	</div>
+	</body>
+</html>
