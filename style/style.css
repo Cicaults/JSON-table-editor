@@ -21,7 +21,12 @@ body {
 }
 
 #addButton {
-	margin: 5px; 
+	margin: 0; 
+}
+
+.popover-content {
+	padding: 3px;
+	text-align: center;
 }
 
 #fileSpan {
