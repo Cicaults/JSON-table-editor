@@ -1,4 +1,4 @@
-# JSON TAble Editor
+# JSON Table Editor
 Редактор простых табличных данных в формате JSON.
 
 ## Возможности
